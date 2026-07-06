@@ -216,22 +216,97 @@
     .stair-step:not(:last-child):after{width:0;left:24px;border-bottom:0}
   }
 
+  /* ---- paid media ---- */
+  .paid-sub{font-size:14.5px;font-weight:300;color:var(--coffee-soft);max-width:680px;
+    line-height:1.62;margin-bottom:16px}
+  .paid-sub.lead{margin-top:-30px}
+  .paid-sub.tail{margin-bottom:46px}
+  .paid-sub strong{color:var(--coffee);font-weight:500}
+  .paid-grid{display:grid;grid-template-columns:1.4fr .85fr;gap:46px;align-items:start}
+  @media(max-width:820px){.paid-grid{grid-template-columns:1fr;gap:38px}}
+
+  /* structure tree */
+  .ptree,.ptree ul{list-style:none;margin:0;padding:0}
+  .ptree ul{margin-left:24px}
+  .ptree ul li{position:relative;padding-left:30px}
+  .ptree ul li:before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--line)}
+  .ptree ul li:last-child:before{bottom:auto;height:21px}
+  .ptree ul li:after{content:"";position:absolute;left:0;top:21px;width:26px;height:1px;background:var(--line)}
+  .pt-card{position:relative;border:1px solid var(--line);background:var(--ivory-deep);
+    border-radius:3px;padding:12px 15px;margin-bottom:14px}
+  .pt-card.is-ad{background:var(--ivory)}
+  .pt-head{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+  .pt-ic{width:15px;height:15px;flex:none;color:var(--accent)}
+  .pt-tier{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--coffee-faint)}
+  .pt-name{font-size:14px;font-weight:500;color:var(--coffee);margin-left:auto;
+    letter-spacing:-0.01em;text-align:right}
+  .pt-chips{display:flex;flex-wrap:wrap;gap:6px}
+  .pt-chip{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--coffee-soft);
+    background:var(--ivory);border:1px solid var(--line);padding:3px 8px;border-radius:2px;white-space:nowrap}
+  .pt-card.is-ad .pt-chip{background:var(--ivory-deep)}
+  .pt-chip.hl{color:var(--ivory);background:var(--accent);border-color:var(--accent)}
+  .paid-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--coffee-faint);
+    line-height:1.8;margin-top:8px;max-width:540px}
+
+  /* settings panel */
+  .paid-settings{border:1px solid var(--line);border-radius:3px;background:var(--ivory-deep);padding:20px 22px 22px}
+  .ps-h{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:16px}
+  .ps-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--coffee-faint);margin-bottom:8px}
+  .ps-group{margin-bottom:20px}
+  .ps-group:last-child{margin-bottom:0}
+  .ps-opt{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:13.5px;color:var(--coffee-soft);
+    border-bottom:1px solid var(--line)}
+  .ps-opt:last-child{border-bottom:0}
+  .ps-opt .dot{width:12px;height:12px;border-radius:50%;border:1px solid var(--line);flex:none}
+  .ps-opt.on{color:var(--coffee);font-weight:500}
+  .ps-opt.on .dot{border-color:var(--accent);background:radial-gradient(circle at center,var(--accent) 0 3.5px,transparent 4px)}
+  .ps-toggle{display:flex;border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:9px}
+  .ps-toggle span{flex:1;text-align:center;padding:9px 6px;font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--coffee-soft)}
+  .ps-toggle span.on{background:var(--coffee);color:var(--ivory)}
+  .ps-amt{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--coffee)}
+  .ps-amt span{color:var(--coffee-faint)}
+  .ps-plat{display:flex;gap:7px;margin-top:2px}
+  .ps-plat span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ivory);
+    background:var(--coffee);padding:5px 11px;border-radius:3px}
+
   /* ---- about mindmap ---- */
   .about-lead{font-size:18px;font-weight:300;color:var(--coffee-soft);line-height:1.66;margin-bottom:26px}
   .about-lead strong{color:var(--coffee);font-weight:500}
-  .mindmap{width:100%;height:auto;max-width:520px;overflow:visible;display:block}
+  .mindmap{width:100%;height:auto;max-width:540px;overflow:visible;display:block}
   .mm-link{fill:none;stroke:var(--line);stroke-width:1.3}
   .mm-hub{fill:var(--coffee)}
   .mm-hub-t{fill:var(--ivory);font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.06em}
   .mm-pill{fill:var(--ivory-deep);stroke:var(--line);stroke-width:1.2}
   .mm-pill.hl{stroke:var(--accent);stroke-width:1.5}
-  .mm-t{fill:var(--coffee);font-family:'Inter',sans-serif;font-weight:500;font-size:13.5px}
+  .mm-t{fill:var(--coffee);font-family:'Inter',sans-serif;font-weight:500;font-size:13px}
+  .mm-tool{fill:var(--coffee-faint);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.01em}
   @keyframes mmFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
   .mm-node{animation:mmFloat 6s ease-in-out infinite}
   .mm-node:nth-of-type(2){animation-duration:7s;animation-delay:-1s}
   .mm-node:nth-of-type(3){animation-duration:6.5s;animation-delay:-2.6s}
   .mm-node:nth-of-type(4){animation-duration:7.4s;animation-delay:-1.6s}
   .mm-node:nth-of-type(5){animation-duration:6.2s;animation-delay:-3.2s}
+  .mm-node:nth-of-type(6){animation-duration:7.1s;animation-delay:-4.1s}
+
+  /* mindmap mobile fallback */
+  .mm-mobile{display:none}
+  @media(max-width:680px){
+    .mindmap{display:none}
+    .mm-mobile{display:block;margin-top:10px}
+    .mmm-hub{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;
+      color:var(--ivory);background:var(--coffee);padding:6px 12px;border-radius:3px;margin-bottom:18px}
+    .mmm-row{position:relative;padding:0 0 15px 15px;margin-bottom:15px;border-bottom:1px solid var(--line)}
+    .mmm-row:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+    .mmm-row:before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--accent)}
+    .mmm-row.hl:before{width:6px;height:6px;top:5px}
+    .mmm-t{display:block;font-size:15px;font-weight:500;color:var(--coffee);letter-spacing:-0.01em}
+    .mmm-tools{display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--coffee-soft);
+      margin-top:4px;line-height:1.5}
+  }
 
   /* ---- categorized toolkit ---- */
   .toolcats{display:grid;grid-template-columns:1fr 1fr;gap:34px 48px}
@@ -366,6 +441,7 @@
       <a href="#about">About</a>
       <a href="#madata">MADATA</a>
       <a href="#process">Process</a>
+      <a href="#paid">Paid</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#contact">Contact</a>
     </div>
@@ -377,7 +453,7 @@
   <div class="wrap">
     <div class="eyebrow reveal">Data Analyst · SEO / AEO · Reporting Systems</div>
     <h1 class="reveal">Jane&nbsp;Ha</h1>
-    <p class="thesis reveal">I came up through <strong>creative production</strong> and social media, followed the questions into analytics, earned a master's in data science, and now turn <strong>marketing data into decisions</strong>.</p>
+    <p class="thesis reveal">I began in creative media and social, followed the questions into analytics, and earned a master's in data science. Today I specialize in <strong>SEO and AEO, paid media, and marketing analytics</strong>, turning <strong>marketing data into decisions</strong>.</p>
 
     <svg class="arc-svg reveal" viewBox="0 0 1000 260" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Career path: creative production, to social media, to analytics, to a master's in data science, to data analyst now.">
       <line class="arc-base" x1="90" y1="234" x2="910" y2="234"/>
@@ -431,46 +507,72 @@
     <div class="sec-head reveal"><span class="num">01</span><h2>About</h2></div>
     <div class="about-grid">
       <div class="reveal">
-        <p class="about-lead">I started in creative media and social, then followed the numbers into analytics and a master's in data science. Today I build the <strong>reporting and search systems</strong> that turn marketing data into decisions, and nothing goes in a report as fact unless the data backs it.</p>
+        <p class="about-lead">I began in creative media, producing digital content and managing social media. Working with social media analytics sparked an interest in understanding not just what content performed well, but why. That interest led me to a master's in Business Data Science &amp; Analytics. Today I specialize in <strong>SEO and AEO, paid media, and marketing analytics</strong>, and build the data engineering behind them. I built <strong>MA DATA</strong> to automate reporting and turn marketing data into clear business insights, ensuring every report is supported by measurable evidence.</p>
         <div class="about-meta">
           <span class="k">// EDUCATION</span>
           M.S. / MBA · Business Data Science &amp; Analytics<br>Angelo State University · 2025
           <span class="k">// FOCUS</span>
-          Analytics &amp; reporting<br>SEO / AEO research<br>Front- &amp; back-end implementation
+          SEO / AEO research<br>Paid media · Meta / LinkedIn<br>Analytics &amp; reporting<br>Front- &amp; back-end implementation
           <span class="k">// BASED</span>
           West Texas<br>Open to relocation
         </div>
       </div>
       <div class="reveal">
-        <svg class="mindmap" viewBox="0 0 480 430" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Skill map centered on Jane Ha, branching to creative and content, social and paid media, SEO and AEO, analytics and reporting, and web development.">
-          <path class="mm-link" d="M235,215 Q150,140 115,60"/>
-          <path class="mm-link" d="M235,215 Q330,150 390,88"/>
-          <path class="mm-link" d="M235,215 Q330,225 392,232"/>
-          <path class="mm-link" d="M235,215 Q300,320 322,380"/>
-          <path class="mm-link" d="M235,215 Q140,270 104,300"/>
-          <rect class="mm-hub" x="188" y="195" width="94" height="40" rx="20"/>
-          <text class="mm-hub-t" x="235" y="220" text-anchor="middle">JANE HA</text>
+        <svg class="mindmap" viewBox="0 0 560 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Skill map centered on Jane Ha, branching to creative and content with Adobe Premiere, Canva and Hootsuite; SEO and AEO with Screaming Frog, SpyFu, Search Console and Schema; social and paid media with Meta Ads, LinkedIn Ads and Hootsuite; analytics and reporting with Python, FastAPI, SQL, Supabase and Excel; web development with WordPress, Elementor, Wix, Ed Suite and Google Tag; and Google with GA4, Business Profile, Google Ads and Tag Manager.">
+          <path class="mm-link" d="M280,240 Q235,150 218,63"/>
+          <path class="mm-link" d="M280,240 Q249,240 218,240"/>
+          <path class="mm-link" d="M280,240 Q235,330 218,417"/>
+          <path class="mm-link" d="M280,240 Q325,150 342,63"/>
+          <path class="mm-link" d="M280,240 Q311,240 342,240"/>
+          <path class="mm-link" d="M280,240 Q325,330 342,417"/>
+          <rect class="mm-hub" x="233" y="220" width="94" height="40" rx="20"/>
+          <text class="mm-hub-t" x="280" y="244" text-anchor="middle">JANE HA</text>
           <g class="mm-node">
-            <rect class="mm-pill" x="39" y="44" width="152" height="32" rx="16"/>
-            <text class="mm-t" x="115" y="65" text-anchor="middle">Creative &amp; content</text>
+            <rect class="mm-pill" x="8" y="34" width="210" height="58" rx="12"/>
+            <text class="mm-t" x="113" y="57" text-anchor="middle">Creative &amp; content</text>
+            <text class="mm-tool" x="113" y="73" text-anchor="middle">Adobe Premiere · Canva</text>
+            <text class="mm-tool" x="113" y="85" text-anchor="middle">Hootsuite</text>
           </g>
           <g class="mm-node">
-            <rect class="mm-pill" x="341" y="72" width="98" height="32" rx="16"/>
-            <text class="mm-t" x="390" y="93" text-anchor="middle">SEO / AEO</text>
+            <rect class="mm-pill" x="342" y="34" width="210" height="58" rx="12"/>
+            <text class="mm-t" x="447" y="57" text-anchor="middle">SEO / AEO</text>
+            <text class="mm-tool" x="447" y="73" text-anchor="middle">Screaming Frog · SpyFu</text>
+            <text class="mm-tool" x="447" y="85" text-anchor="middle">Search Console · Schema</text>
           </g>
           <g class="mm-node">
-            <rect class="mm-pill hl" x="304" y="216" width="176" height="32" rx="16"/>
-            <text class="mm-t" x="392" y="237" text-anchor="middle">Analytics &amp; reporting</text>
+            <rect class="mm-pill" x="8" y="211" width="210" height="58" rx="12"/>
+            <text class="mm-t" x="113" y="234" text-anchor="middle">Social &amp; paid media</text>
+            <text class="mm-tool" x="113" y="250" text-anchor="middle">Meta Ads · LinkedIn Ads</text>
+            <text class="mm-tool" x="113" y="262" text-anchor="middle">Hootsuite · Boosting</text>
           </g>
           <g class="mm-node">
-            <rect class="mm-pill" x="247" y="364" width="150" height="32" rx="16"/>
-            <text class="mm-t" x="322" y="385" text-anchor="middle">Web development</text>
+            <rect class="mm-pill hl" x="342" y="211" width="210" height="58" rx="12"/>
+            <text class="mm-t" x="447" y="234" text-anchor="middle">Analytics &amp; reporting</text>
+            <text class="mm-tool" x="447" y="250" text-anchor="middle">Python · FastAPI · SQL</text>
+            <text class="mm-tool" x="447" y="262" text-anchor="middle">Supabase · Excel</text>
           </g>
           <g class="mm-node">
-            <rect class="mm-pill" x="25" y="284" width="158" height="32" rx="16"/>
-            <text class="mm-t" x="104" y="305" text-anchor="middle">Social &amp; paid media</text>
+            <rect class="mm-pill" x="8" y="388" width="210" height="58" rx="12"/>
+            <text class="mm-t" x="113" y="411" text-anchor="middle">Web development</text>
+            <text class="mm-tool" x="113" y="427" text-anchor="middle">WordPress · Elementor · Wix</text>
+            <text class="mm-tool" x="113" y="439" text-anchor="middle">Ed Suite · Google Tag</text>
+          </g>
+          <g class="mm-node">
+            <rect class="mm-pill" x="342" y="388" width="210" height="58" rx="12"/>
+            <text class="mm-t" x="447" y="411" text-anchor="middle">Google</text>
+            <text class="mm-tool" x="447" y="427" text-anchor="middle">GA4 · Business Profile</text>
+            <text class="mm-tool" x="447" y="439" text-anchor="middle">Google Ads · Tag Manager</text>
           </g>
         </svg>
+        <div class="mm-mobile" aria-hidden="true">
+          <span class="mmm-hub">JANE HA</span>
+          <div class="mmm-row"><span class="mmm-t">Creative &amp; content</span><span class="mmm-tools">Adobe Premiere · Canva · Hootsuite</span></div>
+          <div class="mmm-row"><span class="mmm-t">SEO / AEO</span><span class="mmm-tools">Screaming Frog · SpyFu · Search Console · Schema</span></div>
+          <div class="mmm-row"><span class="mmm-t">Social &amp; paid media</span><span class="mmm-tools">Meta Ads · LinkedIn Ads · Hootsuite</span></div>
+          <div class="mmm-row hl"><span class="mmm-t">Analytics &amp; reporting</span><span class="mmm-tools">Python · FastAPI · SQL · Supabase · Excel</span></div>
+          <div class="mmm-row"><span class="mmm-t">Web development</span><span class="mmm-tools">WordPress · Elementor · Wix · Ed Suite · Google Tag</span></div>
+          <div class="mmm-row"><span class="mmm-t">Google</span><span class="mmm-tools">GA4 · Business Profile · Google Ads · Tag Manager</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -729,10 +831,125 @@
   </div>
 </section>
 
+<!-- PAID MEDIA -->
+<section id="paid">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="num">03</span><h2>Paid media</h2></div>
+    <p class="paid-sub lead reveal">My paid media is driven by the numbers, not guesswork. Before each cycle I review the <strong>previous month's performance for that specific business</strong>: which audiences, placements, and creative actually drove results and which fell flat. Then I rebuild the targeting and messaging around what worked, so every client's ads are tuned to <strong>their own data, business by business</strong>, rather than a shared template.</p>
+    <p class="paid-sub tail reveal">The build itself is a structured campaign to ad set to ad, with the objective and budget set first, then audience and creative shaped to match. The example below is anonymized demo data.</p>
+    <div class="paid-grid">
+      <div class="reveal">
+        <ul class="ptree">
+          <li>
+            <div class="pt-card">
+              <div class="pt-head">
+                <svg class="pt-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h8a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>
+                <span class="pt-tier">Campaign</span>
+                <span class="pt-name">Awareness · Local</span>
+              </div>
+              <div class="pt-chips">
+                <span class="pt-chip hl">Objective · Awareness</span>
+                <span class="pt-chip">Budget · Lifetime</span>
+                <span class="pt-chip">Advantage+ budget</span>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <div class="pt-card">
+                  <div class="pt-head">
+                    <svg class="pt-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+                    <span class="pt-tier">Ad set</span>
+                    <span class="pt-name">Broad · 25 mi radius</span>
+                  </div>
+                  <div class="pt-chips">
+                    <span class="pt-chip">Audience · broad</span>
+                    <span class="pt-chip">Feed + Reels</span>
+                    <span class="pt-chip">Jul 1 – 31</span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class="pt-card is-ad">
+                      <div class="pt-head">
+                        <svg class="pt-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
+                        <span class="pt-tier">Ad</span>
+                        <span class="pt-name">Single image</span>
+                      </div>
+                      <div class="pt-chips"><span class="pt-chip">Primary text</span><span class="pt-chip">Learn more</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="pt-card is-ad">
+                      <div class="pt-head">
+                        <svg class="pt-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
+                        <span class="pt-tier">Ad</span>
+                        <span class="pt-name">Video · 15s</span>
+                      </div>
+                      <div class="pt-chips"><span class="pt-chip">Primary text</span><span class="pt-chip">Learn more</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="pt-card">
+                  <div class="pt-head">
+                    <svg class="pt-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+                    <span class="pt-tier">Ad set</span>
+                    <span class="pt-name">Retarget · site visitors</span>
+                  </div>
+                  <div class="pt-chips">
+                    <span class="pt-chip">Custom audience</span>
+                    <span class="pt-chip">Feed</span>
+                    <span class="pt-chip">Jul 1 – 31</span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class="pt-card is-ad">
+                      <div class="pt-head">
+                        <svg class="pt-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
+                        <span class="pt-tier">Ad</span>
+                        <span class="pt-name">Carousel · 4 cards</span>
+                      </div>
+                      <div class="pt-chips"><span class="pt-chip">Primary text</span><span class="pt-chip">Sign up</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="paid-note">One campaign fans out into targeted ad sets, each carrying its own creative.<br>Objective and budget live at the campaign level &nbsp;·&nbsp; audience and placement in the ad set &nbsp;·&nbsp; creative and copy in the ad.</p>
+      </div>
+
+      <div class="paid-settings reveal">
+        <div class="ps-h">Campaign settings</div>
+        <div class="ps-group">
+          <div class="ps-label">Objective</div>
+          <div class="ps-opt on"><span class="dot"></span>Awareness</div>
+          <div class="ps-opt"><span class="dot"></span>Traffic</div>
+          <div class="ps-opt"><span class="dot"></span>Engagement</div>
+          <div class="ps-opt"><span class="dot"></span>Leads</div>
+          <div class="ps-opt"><span class="dot"></span>Sales</div>
+        </div>
+        <div class="ps-group">
+          <div class="ps-label">Budget</div>
+          <div class="ps-toggle"><span>Daily</span><span class="on">Lifetime</span></div>
+          <div class="ps-amt">$1,500 <span>· Jul 1 – Jul 31</span></div>
+        </div>
+        <div class="ps-group">
+          <div class="ps-label">Platform</div>
+          <div class="ps-plat"><span>Meta</span><span>LinkedIn</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CAPABILITIES -->
 <section id="capabilities">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="num">03</span><h2>Capabilities</h2></div>
+    <div class="sec-head reveal"><span class="num">04</span><h2>Capabilities</h2></div>
     <div class="caps">
       <div class="cap reveal">
         <div class="ci">A.</div>
@@ -811,7 +1028,7 @@
 <!-- TOOLKIT -->
 <section id="toolkit">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="num">04</span><h2>Toolkit</h2></div>
+    <div class="sec-head reveal"><span class="num">05</span><h2>Toolkit</h2></div>
     <div class="toolcats reveal">
       <div class="toolcat">
         <div class="tc-h">Data &amp; engineering</div>
